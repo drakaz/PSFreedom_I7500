@@ -48,6 +48,7 @@ evo4g: build_msm72k
 gpone: build_msm72k
 hero: build_msm72k
 g1: build_msm72k
+galaxy : build_msm72k
 
 # Aliases for non generic devices
 n900-power: N900-POWER

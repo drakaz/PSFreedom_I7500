@@ -135,7 +135,8 @@ static void psfreedom_set_address (struct usb_gadget *g, u8 address)
    This uses the offset from the usb_gadget supplied to find
    our value. Should hold while usb_info remains the same.
 */
-#define USBDEVADDR (readu(*(unsigned int *)UI_ALLOC_ADDR + 12) + 0x0154)
+#define UI_GADGET_OFFSET 1612
+#define USBDEVADDR (readu((unsigned)g - UI_GADGET_OFFSET) + 0x0154)
 
 static inline void writel(unsigned long l, unsigned long addr)
 {
